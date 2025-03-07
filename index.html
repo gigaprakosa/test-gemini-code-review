@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flawed Complex Web App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="mainHeader">
+    <h1>Flawed Complex Web App</h1>
+    <nav id="navBar">
+      <ul>
+        <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+        <li><a href="#about" onclick="navigateTo('about')">About</a></li>
+        <li><a href="#contact" onclick="navigateTo('contact')">Contact</a></li>
+        <li><a href="#profile" onclick="navigateTo('profile')">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="mainContent">
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>This is the home page of a flawed web application.</p>
+      <input type="text" id="userCommand" placeholder="Enter command">
+      <button onclick="processCommand()">Execute Command</button>
+      <div id="commandOutput"></div>
+      <div id="notificationArea"></div>
+    </section>
+    <section id="about" style="display:none">
+      <h2>About</h2>
+      <p>About section with some information about the app and its developers.</p>
+    </section>
+    <section id="contact" style="display:none">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="contactName" placeholder="Your Name">
+        <input type="email" id="contactEmail" placeholder="Your Email">
+        <textarea id="contactMessage" placeholder="Your Message"></textarea>
+        <button type="button" onclick="submitContact()">Send</button>
+      </form>
+      <div id="contactResponse"></div>
+    </section>
+    <section id="profile" style="display:none">
+      <h2>User Profile</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="login()">Login</button>
+      </form>
+      <div id="profileInfo"></div>
+    </section>
+  </main>
+  <footer id="mainFooter">
+    <p>&copy; 2025 Flawed Web App Inc.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
